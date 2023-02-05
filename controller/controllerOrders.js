@@ -27,29 +27,24 @@ class ControllerOrder {
 }
 }
 
-    static async updateOrders(req, res, next) 
-    {
-	    let {id} = req.params;
-	    let {status,total,UserId,ItemId}= req.body;
+        static async updateOrders(req, res, next) {
+        let {id} = req.params;
+        let {status,total,UserId,ItemId}= req.body;
         try {
             let dataOrder = await Order.findOne(
-		{
-			where: {
-			id: id,
-			},
-			});
+        {
+            where: {
+            id: id,
+            },
+            });
 
             let updateData=await dataOrder.update({
-                status,
-                total,
-                UserId,
-                ItemId
-            });
+                status,total,UserId,ItemId
+            })
             res.status(200).json(updateData)
         } catch (error) {
     next(error)
 }
-}
-
+    }
 }
 module.exports = ControllerOrder
