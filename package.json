@@ -25,6 +25,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.9.0",
+    "readme-md": "^0.13.1",
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
