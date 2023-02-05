@@ -26,15 +26,20 @@ class ControllerOrder {
     
 }
 }
-    static async updateOrders(req, res, next) {
-        try {
-            let {status,total,UserId,ItemId}=req.body
 
-            let updateData=await Order.create({
-                status,
-                total,
-                UserId,
-                ItemId
+    static async updateOrders(req, res, next) {
+	let {id} = req.params;
+	let {status,total,UserId,ItemId}= req.body;
+        try {
+            let dataOrder = await Order.findOne(
+		{
+			where: {
+			id: id,
+			},
+			});
+
+            let updateData=await dataOrder.update({
+                status,total,UserId,ItemId
             })
             res.status(200).json(updateData)
         } catch (error) {
