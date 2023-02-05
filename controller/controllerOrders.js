@@ -26,5 +26,20 @@ class ControllerOrder {
     
 }
 }
+    static async updateOrders(req, res, next) {
+        try {
+            let {status,total,UserId,ItemId}=req.body
+
+            let updateData=await Order.create({
+                status,
+                total,
+                UserId,
+                ItemId
+            })
+            res.status(200).json(updateData)
+        } catch (error) {
+    next(error)
+}
+    }
 }
 module.exports = ControllerOrder
