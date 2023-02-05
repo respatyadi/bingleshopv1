@@ -1,0 +1,34 @@
+{
+  "name": "bingleshopv1",
+  "version": "1.0.0",
+  "description": "bingleshop v1",
+  "main": "app.js",
+  "scripts": {
+    "test": "commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/respatyadi/bingleshopv1.git"
+  },
+  "keywords": [
+    "bingleshopv1"
+  ],
+  "author": "respatyadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/respatyadi/bingleshopv1/issues"
+  },
+  "homepage": "https://github.com/respatyadi/bingleshopv1#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.9.0",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0"
+  }
+}
