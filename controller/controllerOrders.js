@@ -37,12 +37,13 @@ class ControllerOrder {
             id: id,
             },
             });
-
+            console.log(dataOrder)
             let updateData=await dataOrder.update({
                 status,total,UserId,ItemId
             })
             res.status(200).json(updateData)
         } catch (error) {
+            console.log(error)
     next(error)
 }
     }
