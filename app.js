@@ -16,7 +16,7 @@ app.get('/', (req,res) => {res.send('Bingleshopv1')})
 
 app.get('/role', ControllerRole.getRoles)
 
-app.post('/role/add',authentification, ControllerRole.addRoles)
+app.post('/role/add', ControllerRole.addRoles)
 
 app.post('/role/update/:id',authentification, ControllerRole.updateRoles)
 
