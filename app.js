@@ -22,7 +22,7 @@ app.post('/role/update/:id',authentification, ControllerRole.updateRoles)
 
 app.post('/role/delete/:id',authentification, ControllerRole.deleteRoles)
 
-app.get('/user', ControllerUser.getUsers)
+app.get('/user',authentification, ControllerUser.getUsers)
 
 app.post('/user/register', ControllerUser.registerUsers)
 
