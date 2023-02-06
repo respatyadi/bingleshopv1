@@ -14,9 +14,9 @@ app.use(express.urlencoded({extended:true}));
 
 app.get('/', (req,res) => {res.send('Bingleshopv1')})
 
-app.get('/role', ControllerRole.getRoles)
+app.get('/role',authentification, ControllerRole.getRoles)
 
-app.post('/role/add', ControllerRole.addRoles)
+app.post('/role/add',authentification, ControllerRole.addRoles)
 
 app.post('/role/update/:id',authentification, ControllerRole.updateRoles)
 
@@ -28,9 +28,9 @@ app.post('/user/register', ControllerUser.registerUsers)
 
 app.post('/user/login', ControllerUser.login)
 
-app.post('/user/update/:id', ControllerUser.updateUsers)
+app.post('/user/update/:id',authentification, ControllerUser.updateUsers)
 
-app.post('/user/delete/:id', ControllerUser.deleteUsers)
+app.post('/user/delete/:id',authentification, ControllerUser.deleteUsers)
 
 app.get('/product',authentification, ControllerProduct.getProducts)
 
