@@ -1,6 +1,13 @@
 # bingleshopv1
 gold challenge bingleshop v1
 
+#goals
+1. Rancangan database menggunakan ERD sesuai studi kasus
+2. Server REST API dibuat dengan Express
+3. Penyimpanan data ke PostgreSQL dilakukan dengan Sequelize
+4. Terdapat API register & login
+5. Terdapat API untuk membaca, menyimpan, memperbarui, dan menghapus data
+
 #config
 1. environment yang digunakan : development
 2. nama database : db_bingleshopv1
