@@ -42,7 +42,7 @@ app.get('/order', ControllerOrder.getOrders)
 
 app.post('/order/add', ControllerOrder.addOrders)
 
-app.put('/order/update/:id', ControllerOrder.updateOrders)
+app.post('/order/update/:id', ControllerOrder.updateOrders)
 
 app.get('/item', ControllerItem.getItems)
 
